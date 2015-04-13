@@ -206,17 +206,22 @@ TWSCharacteristic.prototype.onNotify = function() {
 
 TWDirCharacteristic.prototype.onSubscribe = function(maxValueSize, updateValueCallback) {
   console.log('TWDirCharacteristic subscribe');
- 
-  this.counter = 0;
+
+  this.minValue = 0
+  this.maxValue = 40
+  this.counter = Math.floor(Math.random() * this.maxValue) + this.minValue;
   this.changeInterval = setInterval(function() {
     var data = new Buffer(this.counter + '', 'utf-8');
     data.write(this.counter+'');
     // data.writeUInt32LE(this.counter, 0);
- 
+
     console.log('TWDirCharacteristic update value: ' + this.counter);
     updateValueCallback(data);
     this.counter++;
-  }.bind(this), 500);
+    if (this.counter == 40) {
+      this.counter = 0;
+    }
+  }.bind(this), 1500);
 };
  
 TWDirCharacteristic.prototype.onUnsubscribe = function() {
