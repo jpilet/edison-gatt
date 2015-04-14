@@ -1,7 +1,6 @@
 var util = require('util');
 
 var bleno = require('bleno');
-var loremIpsum = require('lorem-ipsum');
 var anemoService = require('./anemomind-service');
 
 var BlenoPrimaryService = bleno.PrimaryService;
