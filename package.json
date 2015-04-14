@@ -12,15 +12,21 @@
   ],
   "author": {
     "name": "Rex St John",
-    "url" : "https://github.com/rexstjohn"
+    "url": "https://github.com/rexstjohn"
   },
   "dependencies": {
     "bleno": "*",
+    "clamp": "^1.0.1",
     "commander": "2.5.x",
-    "promptly": "0.2.x",
-    "node-uuid": "*"
+    "node-uuid": "*",
+    "promptly": "0.2.x"
   },
   "license": "MIT",
-  "repository": { "type": "git", "url": "https://github.com/rexstjohn/edison-ble.js.git" },  
-  "devDependencies": { "should": ">= 0.0.1" }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rexstjohn/edison-ble.js.git"
+  },
+  "devDependencies": {
+    "should": ">= 0.0.1"
+  }
 }
