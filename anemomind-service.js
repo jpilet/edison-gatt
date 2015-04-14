@@ -10,7 +10,8 @@ var util = require('util'),
   BoatSpeedCharacteristic = require('./anemomind-char-boat-speed'),
   HeelingCharacteristic = require('./anemomind-char-heeling'),
   COGCharacteristic = require('./anemomind-char-cog'),
-  SOGCharacteristic = require('./anemomind-char-sog');
+  SOGCharacteristic = require('./anemomind-char-sog'),
+  DataCharacteristic = require('./anemomind-char-data');
 
 
 function AnemoService() {
@@ -24,7 +25,8 @@ function AnemoService() {
       new TWACharacteristic(),
       new HeelingCharacteristic(),
       new COGCharacteristic(),
-      new SOGCharacteristic()
+      new SOGCharacteristic(),
+      new DataCharacteristic()
     ]
   });
 }
